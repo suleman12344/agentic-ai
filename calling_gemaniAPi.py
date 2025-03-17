@@ -1,6 +1,7 @@
 import google.generativeai as genai #importing the generativeai module from google
-
-genai.configure(api_key='AIzaSyDdr3GClp39yAfFMfTsRRyDkqb5u83XhXI') #configuring the api key getting from the google ai studio
+from google_genaiAPI import google_api 
+print(google_api)
+genai.configure(api_key=google_api) #configuring the api key getting from the google ai studio
 
 model = genai.GenerativeModel("gemini-2.0-flash-exp") #creating the model object
 response = model.generate_content("welcome me, I am learning Agentic Ai") #generating the content
